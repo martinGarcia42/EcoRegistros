@@ -10,14 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_04_161423) do
+ActiveRecord::Schema.define(version: 2021_03_05_163318) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "cultivos", force: :cascade do |t|
     t.string "name", null: false
-    t.string "cultivo", null: false
     t.string "variedad", null: false
     t.string "plantas", null: false
     t.string "observaciones", null: false
@@ -35,7 +34,7 @@ ActiveRecord::Schema.define(version: 2021_03_04_161423) do
 
   create_table "intervencions", force: :cascade do |t|
     t.string "action", null: false
-    t.string "date", null: false
+    t.date "fecha", null: false
     t.string "observaciones", null: false
     t.bigint "cultivo_id", null: false
     t.datetime "created_at", precision: 6, null: false
