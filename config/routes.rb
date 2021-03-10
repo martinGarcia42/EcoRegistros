@@ -1,16 +1,16 @@
 Rails.application.routes.draw do
-  root 'pages#homepage'
+  root 'pages#index'
 
   namespace :api do
     namespace :v1 do 
-      resources :farm, param: :id 
-      resources :parcela, param: :id  
-      resources :cultivo, param: :id 
-      resources :intervencion, param: :id 
-      resources :tratamiento, param: :id 
-      resources :recoleccion, param: :id 
+      resources :farms, param: :id 
+      resources :parcelas 
+      resources :cultivos
+      resources :intervencions
+      resources :tratamientos
+      resources :recoleccions
     end 
   end 
 
-  get '*path', to: 'pages#homepage', via: :all
+  get '*path', to: 'pages#index', via: :all
  end
