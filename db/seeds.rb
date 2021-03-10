@@ -47,3 +47,22 @@ intervencion_attributes = ([
     Intervencion.create(attributes) unless Intervencion.where(attributes).first
 end
 
+tratamiento_attributes = ([
+    { producto: "fertilizer", dosis: "pila", caldo: "thick", fecha: 20201025, observaciones: "la polla la plantasion esta manin", cultivo_id: 2 },
+    { producto: "fertilizer", dosis: "pila", caldo: "thick", fecha: 20200925, observaciones: "la polla la plantasion esta manin", cultivo_id: 1 },
+    { producto: "fertilizer", dosis: "pila", caldo: "thick", fecha: 20211025, observaciones: "ta malita :(", cultivo_id: 3 },
+ ])
+ 
+tratamiento_attributes.each do |attributes|
+    Tratamiento.create(attributes) unless Tratamiento.where(attributes).first
+end
+
+recoleccion_attributes = ([
+    { plantas: "fertilizer", kilosdextrio: 30.03, fecha: 20201025, observaciones: "la polla la plantasion esta manin", cultivo_id: 2 },
+    { plantas: "fertilizer", kilosdextrio: 420.69, fecha: 20200925, observaciones: "no ha salido muy guay", cultivo_id: 1 },
+    { plantas: "fertilizer", kilosdextrio: 1050.50, fecha: 20211025, observaciones: "muy efisiente", cultivo_id: 3 },
+ ])
+ 
+ recoleccion_attributes.each do |attributes|
+    Recoleccion.create(attributes) unless Recoleccion.where(attributes).first
+end

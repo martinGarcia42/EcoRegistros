@@ -2,6 +2,8 @@ module Api
     module V1 
         class FarmsController < ApplicationController
 
+            protect_from_forgery with: :null_session
+
             def index
                 farms = Farm.all 
 
@@ -47,7 +49,7 @@ module Api
             private 
 
             def farm_params
-                params.require(:farm).permit(:names)
+                params.require(:farm).permit(:name)
             end
 
             def options 
