@@ -5,13 +5,13 @@ module Api
             def index 
               parcelas = Parcela.all 
 
-              render json: ParcelaSerializer.new(parcelas).serialized_json
+              render json: ParcelaSerializer.new(parcelas, options).serialized_json
             end
 
             def show
                 parcela = Parcela.find(params[:id])
 
-                render json: ParcelaSerializer.new(parcela, optionsra).serialized_json
+                render json: ParcelaSerializer.new(parcela, options).serialized_json
             end
 
             def create 

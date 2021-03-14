@@ -47,7 +47,7 @@ module Api
             private 
 
             def cultivo_params
-                params.require(:parcela).permit(:name, :variedad, :plantas, :observaciones, :parcela_id)
+                params.require(:cultivo).permit(:name, :variedad, :plantas, :observaciones, :parcela_id)
             end
 
             def options

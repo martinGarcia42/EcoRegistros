@@ -7,7 +7,7 @@ module Api
             def index
                 farms = Farm.all 
 
-                render json: FarmSerializer.new(farms).serialized_json
+                render json: FarmSerializer.new(farms, options).serialized_json
             end
 
             def show
@@ -30,7 +30,7 @@ module Api
                 farm = Farm.find(params[:id])
 
                 if farm.update(farm_params)
-                    render json: FarmSerializer.new(farm, options).serialized_json
+                    render json: FarmSerializer.new(farm, option).serialized_json
                 else 
                     render json: { error: farm.errors.messages }, status: 422 
                 end 

@@ -1,6 +1,6 @@
 class CultivoSerializer
     include FastJsonapi::ObjectSerializer
-    attributes :name, :variedad, :plantas, :observaciones, :parcela_id
+    attributes :name, :variedad, :plantas, :observaciones, :parcela_id, :id
   
     has_many :intervencions
     has_many :tratamientos
