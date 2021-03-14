@@ -1,3 +1,16 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-end
+  root 'pages#index'
+
+  namespace :api do
+    namespace :v1 do 
+      resources :farms, param: :id 
+      resources :parcelas 
+      resources :cultivos
+      resources :intervencions
+      resources :tratamientos
+      resources :recoleccions
+    end 
+  end 
+
+  get '*path', to: 'pages#index', via: :all
+ end
