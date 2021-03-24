@@ -10,7 +10,7 @@ const Parcela = (props) => {
         //api/v1/parcelas/id
         //gets id passed through url to be used to find parcela
         const ID = props.match.params.id
-        const url = `api/v1/parcelas/${ID}`
+        const url = `http://localhost:3000/api/v1/parcelas/${ID}`
         
     axios.get(url)
       .then( resp => console.log(resp) )
