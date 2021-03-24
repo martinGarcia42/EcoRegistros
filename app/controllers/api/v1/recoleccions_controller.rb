@@ -47,7 +47,7 @@ module Api
             private 
 
             def recoleccion_params
-                params.require(:parcela).permit(:plantas, :kilosdextrio, :observaciones, :fecha, :cultivo_id)
+                params.require(:recoleccion).permit(:plantas, :kilosdextrio, :observaciones, :fecha, :cultivo_id)
             end
         end 
     end 

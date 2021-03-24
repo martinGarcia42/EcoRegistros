@@ -2,8 +2,6 @@ module Api
     module V1 
         class FarmsController < ApplicationController
 
-            protect_from_forgery with: :null_session
-
             def index
                 farms = Farm.all 
 

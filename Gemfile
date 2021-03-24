@@ -50,3 +50,9 @@ gem 'fast_jsonapi'
 
 #to use accross browsers
 gem 'modernizr-rails'
+
+#to create user models
+gem 'devise'
+
+#to deal with authorisation
+gem 'pundit'

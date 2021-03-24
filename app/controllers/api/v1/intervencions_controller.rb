@@ -1,7 +1,7 @@
 module Api 
     module V1 
         class IntervencionsController < ApplicationController
-
+           
             def index 
                 intervencions = Intervencion.all 
 
@@ -48,7 +48,7 @@ module Api
             private 
 
             def intervencion_params
-                params.require(:parcela).permit(:action, :fecha, :observaciones, :cultivo_id)
+                params.require(:intervencion).permit(:action, :fecha, :observaciones, :cultivo_id)
             end
         end 
     end 

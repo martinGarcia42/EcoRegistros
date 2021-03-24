@@ -48,7 +48,7 @@ module Api
             private 
 
             def tratamiento_params
-                params.require(:parcela).permit(:producto, :dosis, :caldo, :observaciones, :fecha, :cultivo_id)
+                params.require(:tratamiento).permit(:producto, :dosis, :caldo, :observaciones, :fecha, :cultivo_id)
             end
         end 
     end 
