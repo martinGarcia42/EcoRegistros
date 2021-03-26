@@ -56,3 +56,9 @@ gem 'devise'
 
 #to deal with authorisation
 gem 'pundit'
+
+# bulma for rails
+gem 'bulma-rails', '~> 0.8.0'
+
+# simple form for eaier form management
+gem 'simple_form', '~> 5.0', '>= 5.0.1'
