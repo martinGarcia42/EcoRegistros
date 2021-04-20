@@ -1,7 +1,7 @@
 module Api 
     module V1 
         class FarmsController < ApplicationController
-            before_action :authenticate_employee!
+            #before_action :authenticate_employee!
             def index
                 farms = Farm.all 
 

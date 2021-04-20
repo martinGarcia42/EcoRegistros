@@ -1,8 +1,8 @@
 import React, { useState, useEffect, Fragment } from 'react'
 import axios from 'axios'
 
-const Farm = () => {
-    const [farms, setFarms] = useState([])
+const Farm = (props) => {
+    const [farm, setFarm] = useState([])
 
     useEffect(() => {
         // get farm from api
@@ -26,4 +26,4 @@ const Farm = () => {
     )
 }
 
-export default Farm
+export default Farm;
