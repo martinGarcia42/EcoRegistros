@@ -1,20 +1,38 @@
 import React, { useState, useEffect, Fragment } from 'react'
 import axios from 'axios'
+import Parcela from './../Parcelas/Parcela'
 
-const Farm = (props) => {
+const Farm = () => {
     const [farm, setFarm] = useState([])
+    const [parcels, setParcels] = useState([])
+    const [employee, setEmployee] = useState([])
+
+    useEffect(()=> {
+        //api/v1/cultivos/id
+        //gets id passed through url to be used to find Cultivo
+        const ID = props.match.params.id
+        const url = `http://localhost:3000/api/v1/employees/current_employee`
+        
+        axios.get(url)
+        .then( resp => console.log(resp) )
+        .catch( resp => console.log(resp) )
+    }, [employee])
 
     useEffect(() => {
         // get farm from api
         //update farm in our state
-        axios.get('/api/v1/farms')
+        axios.get('http://localhost:3000/api/v1/farms')
           .then( resp => {
-              setFarms(resp.data.data)
+              setFarm(resp.data.data)
+              console.log(resp)
           } )
           .catch(resp => console.log(resp) )
-    }, [farms.length])
+    }, [farm.length])
 
-    const list = farms.map( item => {
+    //parcels = farm.dat
+
+
+    const list = farm.map( item => {
         return (<li key={item.attributes.name}>{item.attributes.name}</li>)
     })
 
