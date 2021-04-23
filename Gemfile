@@ -65,3 +65,5 @@ gem 'simple_form', '~> 5.0', '>= 5.0.1'
 
 #to generate jason web tokens which can be used by react
 gem 'devise-jwt'
+
+gem 'active_model_serializers'

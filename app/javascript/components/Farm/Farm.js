@@ -4,7 +4,6 @@ import Parcela from './../Parcelas/Parcela'
 
 const Farm = () => {
     const [farm, setFarm] = useState([])
-    const [parcels, setParcels] = useState([])
     const [employee, setEmployee] = useState([])
 
     useEffect(()=> {
